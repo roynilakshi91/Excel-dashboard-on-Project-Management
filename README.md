@@ -36,6 +36,5 @@
     * Color the days with "Completed" task =AND(K$12 >= $D13,WORKDAY.INTL($D13,$H13,1)-1>=K$12)
     * Color the days with "In Progress" task =AND(K$12>=WORKDAY.INTL($D13,$H13,1),$E13<>1,$K12<=$G13)
     * Color the days with "Not Started" task =AND(K$12>=WORKDAY.INTL($D13,$H13,1),$E13=0,$K12<=$G13)
-    
-    
+ 
 
