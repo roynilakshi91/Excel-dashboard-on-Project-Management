@@ -1,6 +1,6 @@
-# Excel-dashboard-on-Project-Management
+# Interactive Dashboard in Excel
 
-Formatting :
+
 
 * End Date =WORKDAY.INTL([@[Start Date]]-1,[@Duration],1)
 * Creationg Pivot table
@@ -28,5 +28,14 @@ Formatting :
  * Slicer for Project and Manager
  * Date Range = TEXT(MIN(D13:D58),"MMM-D-YY")&" to "&TEXT(MAX(G13:G58),"MMM-D-YY")
  * Adding a scroll bar to change the date
- * 
+ * Getting the list of dates using function and connect it with thwe scroll bar =SEQUENCE(1,26,MIN(D13:D58)+workings!D12,1)
+ * Conditional Formatting
+    * Progress bar
+    * Formatting the weekend date  =AND(WEEKDAY(K$12,2)>5,$B13<>"")
+    * Adjusting the format of the date list =$K$12<>""
+    * Color the days with "Completed" task =AND(K$12 >= $D13,WORKDAY.INTL($D13,$H13,1)-1>=K$12)
+    * Color the days with "In Progress" task =AND(K$12>=WORKDAY.INTL($D13,$H13,1),$E13<>1,$K12<=$G13)
+    * Color the days with "Not Started" task =AND(K$12>=WORKDAY.INTL($D13,$H13,1),$E13=0,$K12<=$G13)
+    
+    
 
